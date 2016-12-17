@@ -2,29 +2,33 @@ package bsearch;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
+import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
 
+import static org.junit.Assert.*;
 
 public class IsInSequenceLengthOneTest {
-	
+
 	SearchResult searchResult;
-	
+	int position = 1;
+
 	@Before
-	public void create()
-	{
-		searchResult = mock(SearchResult.class);
-		when(searchResult.isFound()).thenReturn(true);
-		when(searchResult.getPosition()).thenReturn(1);
-		
+	public void create() {
+		int key = 1;
+		int[] seq = new int[1];
+		seq[0] = 1;
+		searchResult = BinarySearch.search(key, seq);
 	}
-	
+
 	@Test
-	public void test()
-	{
-		
+	public void isFoundTest() {
+		assertSame(searchResult.isFound(), true);
+	}
+
+	@Test
+	public void getPositionTest() {
+		assertSame(searchResult.getPosition(), position);
 	}
 
 }
