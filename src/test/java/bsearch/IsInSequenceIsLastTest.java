@@ -18,7 +18,7 @@ public class IsInSequenceIsLastTest {
 	@Before
 	public void create() {
 		int key = 1;
-		int[] seq = {2,3,4,5,6,1};
+		int[] seq = {-7,-6,-5,-4,-3,1};
 		searchResult = BinarySearch.search(key, seq);
 	}
 

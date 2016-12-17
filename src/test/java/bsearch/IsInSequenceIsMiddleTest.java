@@ -16,7 +16,7 @@ public class IsInSequenceIsMiddleTest {
 	@Before
 	public void create() {
 		int key = 1;
-		int[] seq = {2,3,1,5,6,};
+		int[] seq = {-3,-2,1,5,6,};
 		searchResult = BinarySearch.search(key, seq);
 	}
 
