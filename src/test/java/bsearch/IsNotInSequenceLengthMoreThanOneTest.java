@@ -8,21 +8,20 @@ import org.junit.Test;
 import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
 
-public class IsInSequenceIsMiddleTest {
-	
+public class IsNotInSequenceLengthMoreThanOneTest {
 	SearchResult searchResult;
-	int position = 3;
+	int position = -1;
 
 	@Before
 	public void create() {
 		int key = 1;
-		int[] seq = {-3,-2,1,5,6};
+		int[] seq = {-3,-2,2,5,6};
 		searchResult = BinarySearch.search(key, seq);
 	}
 
 	@Test
 	public void isFoundTest() {
-		assertSame(searchResult.isFound(), true);
+		assertSame(searchResult.isFound(), false);
 	}
 
 	@Test
