@@ -16,7 +16,7 @@ public class IsInSequenceIsFirstTest {
 	@Before
 	public void create() {
 		int key = 1;
-		int[] seq = {1,2,3,4,5,56,7,235,23,2,3,5};
+		int[] seq = {1,2,3,4,5,6,7,8,9,10,11,12};
 		searchResult = BinarySearch.search(key, seq);
 	}
 
