@@ -2,11 +2,12 @@ package bsearch;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.hamcrest.CoreMatchers.*;
+
 
 import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
 import org.junit.Assert;
+import static org.hamcrest.CoreMatchers.*;
 
 
 public class IsInSequenceLengthOneTest {
