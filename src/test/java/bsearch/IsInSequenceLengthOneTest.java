@@ -2,16 +2,18 @@ package bsearch;
 
 import org.junit.Before;
 import org.junit.Test;
+import static org.hamcrest.CoreMatchers.*;
 
 import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult;
+import org.junit.Assert;
 
-import static org.junit.Assert.*;
 
 public class IsInSequenceLengthOneTest {
 
 	SearchResult searchResult;
 	int position = 1;
+	int searchedElement = 1;
 
 	@Before
 	public void create() {
@@ -23,12 +25,12 @@ public class IsInSequenceLengthOneTest {
 
 	@Test
 	public void isFoundTest() {
-		assertSame(searchResult.isFound(), true);
+		Assert.assertThat( searchResult.isFound(), is(true));
 	}
 
 	@Test
 	public void getPositionTest() {
-		assertSame(searchResult.getPosition(), position);
+		Assert.assertThat(searchResult.getPosition(), is(position));
 	}
 
 }
