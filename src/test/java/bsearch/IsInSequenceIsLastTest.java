@@ -1,6 +1,7 @@
 package bsearch;
 
-import static org.junit.Assert.assertSame;
+import org.junit.Assert;
+import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,12 +25,12 @@ public class IsInSequenceIsLastTest {
 
 	@Test
 	public void isFoundTest() {
-		assertSame(searchResult.isFound(), true);
+		Assert.assertThat( searchResult.isFound(), is(true));
 	}
 
 	@Test
 	public void getPositionTest() {
-		assertSame(searchResult.getPosition(), position);
+		Assert.assertThat(searchResult.getPosition(), is(position));
 	}
 
 }
